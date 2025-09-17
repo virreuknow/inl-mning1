@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block heading %}{% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Hem</a>
+        <a href="{{ url_for('about') }}">Om oss</a>
+        <a href="{{ url_for('contact') }}">Kontakt</a>
+        <a href="{{ url_for('news') }}">Nyheter</a>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>2025 Min grej</p>
+    </footer>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

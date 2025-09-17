@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block heading %}Kontakt{% endblock %}
+
+{% block content %}
+<h1>Kontakt</h1>
+<p id="para">Du kan nå oss på <a href="mailto:info@exempel.se">info@exempel.se</a></p>
+<button onclick="changeText()">Gör texten röd</button>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    let counter = 0
+
+    function changeText() {
+        const para = document.getElementById("para")
+        counter++;
+        if (counter % 2 === 0) {
+            para.style.color = "black"
+        } else {
+            para.style.color = "red"
+        }
+    }
+</script>
+{% endblock %}
+
